@@ -24,31 +24,20 @@ class SearchFilter extends PureComponent {
       [e.target.name]: e.target.value
     });
   };
-  //   handleFilter = e => {
-  //     this.setState({
-  //       artists: artists
-  //     });
-  //   };
+
   addArtist = () => {
-    let artists = this.state.artists.push(this.state.addArtistInput);
     this.setState({
-      artists,
+      artists: [this.state.artists.push(this.state.addArtistInput)],
       addArtistInput: ""
     });
   };
   render() {
-    // let artists = this.state.artists.map(val => {
-    //   return <h1>{val}</h1>;
-    // });
-    // let filteredArtitis = this.state.artists.filter(word =>
-    //   word.includes(this.state.input.toUpperCase())
-    // );
-    console.log(this.state);
     let filteredArtitis = this.state.artists.filter(word =>
       word.includes(this.state.input.toUpperCase())
     );
-    let str = "str";
-    console.log(typeof str);
+    console.log(this.state.artists);
+    console.log(this.props);
+
     return (
       <div>
         <input

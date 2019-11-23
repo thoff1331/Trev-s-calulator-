@@ -5,6 +5,8 @@ import CardDisplay from "./Components/CardDisplay";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import SearchFilter from "./Components/SearchFilter";
+import CheckBox from "./Components/CheckBox";
+import Spinner from "./Components/Spinner";
 
 class App extends PureComponent {
   constructor(props) {
@@ -37,24 +39,7 @@ class App extends PureComponent {
     console.log(this.props);
     console.log(this.state);
 
-    return (
-      <div>
-        {/* <div>
-          <DatePicker
-            selected={this.state.StartDate}
-            onChange={this.handleChange}
-          />
-          <h1>Date Seperator</h1>
-          <DatePicker
-            selected={this.state.EndDate}
-            onChange={this.handleChangeEnd}
-          />
-        </div>
-        <CardDisplay /> */}
-
-        <SearchFilter />
-      </div>
-    );
+    return <Calculations />;
   }
 }
 
